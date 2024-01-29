@@ -2,12 +2,15 @@ import { useState } from "react";
 import "./App.css";
 import MovieItem from "./components/MovieItem/component";
 import favoriteIcon from "./assets/images/favorite_icon.svg";
+import titanicImg from "./assets/images/titanic_img.jpg";
+import homeAloneImg from "./assets/images/home_alone_img.jpg";
+import backToTheFutureImg from "./assets/images/back_to_the_future.jpg";
 
 function App() {
-
   const [data, setData] = useState([
     {
       id: 1,
+      poster: titanicImg,
       title: "Titanic",
       released: "1997",
       director: "James Cameron",
@@ -15,6 +18,7 @@ function App() {
     },
     {
       id: 2,
+      poster: homeAloneImg,
       title: "Home Alone",
       released: "1990",
       director: "Chris Columbus",
@@ -22,6 +26,7 @@ function App() {
     },
     {
       id: 3,
+      poster: backToTheFutureImg,
       title: "Back to the Future",
       released: "1985",
       director: "Robert Zemeckis",
@@ -49,6 +54,7 @@ function App() {
         return (
           <MovieItem
             key={item.id}
+            poster={item.poster}
             title={item.title}
             releasedDate={item.released}
             director={item.director}

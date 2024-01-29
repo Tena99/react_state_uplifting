@@ -1,4 +1,43 @@
-img {
-  width: 25px;
-  
+.movie_Card {
+  display: flex;
+  position: relative;
+  padding: 10px;
+  margin: 10px auto;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #e4e4e4;
+  box-shadow: 5px 5px 10px #797979;
+
+  .img_container {
+    width: 60%;
+    border-radius: 15px;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .movie_Card_body {
+    padding: 5px;
+
+    h3,
+    p {
+      padding: 5px;
+    }
+  }
+}
+
+.fav_Btn {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  img {
+    width: 25px;
+  }
 }
